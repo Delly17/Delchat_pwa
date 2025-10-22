@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json">
+<title>DelChat Lite</title>
+<link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#2196f3">
+</head>
+<body>
+<header><h1>💬 DelChat Lite</h1></header>
+<main id="app">
+<div id="login" class="screen">
+<input id="username" type="text" placeholder="Votre nom..." />
+<button id="loginBtn">Entrer</button>
+</div>
+<div id="chat" class="screen hidden">
+<div id="userBar"><span id="userDisplay"></span>
+<button id="logoutBtn">Déconnexion</button></div>
+<div id="messages"></div>
+<div id="sendBox">
+<input id="messageInput" type="text" placeholder="Écrivez un message..." />
+<button id="sendBtn">Envoyer</button>
+</div></div>
+</main>
+
+
+<button id="installBtn" style="
+  background-color:#ff4081;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:25px;
+  font-size:16px;
+  cursor:pointer;
+  display:none;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.3);
+">
+ Installer DelChat Lite
+</button>
+
+<script src="app.js"></script>
+
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>
